@@ -1,5 +1,9 @@
 # DataWarehouse-Design
-It creates a schema design for the data warehouse that integrates the data sources, identify summarizability problems in the design, and populate data warehouse tables from sample rows in the data sources.
+It creates a schema design for the data warehouse that integrates the data sources, identify summarizability problems in the design, and populate data warehouse tables from sample rows in the data sources. 
+
+<p>Mini case study contains two data sources with sample data along with a statement of business needs. Using the data sources and business needs, you will specify a dimensional model with dimensions, measures, and grain, create a schema design for the data warehouse that integrates the data sources, identify summarizability problems in the design, and populate data warehouse tables from sample rows in the data sources.</p>
+
+<p><h4>First of all lets start with basics of Data Warehousing:</h4></p>
 
 <h3>What is a Data Warehouse?</h3>
 <p>A data warehouse is a relational database that is designed for query and analysis rather than for transaction processing. It usually contains historical data derived from transaction data, but it can include data from other sources. It separates analysis workload from transaction workload and enables an organization to consolidate data from several sources.<p>
@@ -32,3 +36,13 @@ A typical OLTP operation accesses only a handful of records. For example, "Retri
 5><b>Historical data</b>:<br>
 Data warehouses usually store many months or years of data. This is to support historical analysis.<br>
 OLTP systems usually store data from only a few weeks or months. The OLTP system stores only historical data as needed to successfully meet the requirements of the current transaction.</p>
+
+<h3>OLAP Cube:</h3>
+<div>
+<img src= "https://imgur.com/YSJOnLA.png">
+</div>
+<p>At the core of the OLAP, concept is an <b>OLAP Cube</b>. <b>The OLAP cube is a data structure optimized for very quick data analysis.</b>
+<br>
+The OLAP Cube consists of numeric facts called measures which are categorized by dimensions. OLAP Cube is also called the <b>hypercube</b>.
+<br>
+Usually, data operations and analysis are performed using the simple spreadsheet, where data values are arranged in row and column format. This is ideal for two-dimensional data. However, OLAP contains <b>multidimensional data</b>, with data usually obtained from a different and unrelated source. Using a spreadsheet is not an optimal option. The cube can store and analyze multidimensional data in a logical and orderly manner. </p>
