@@ -1,7 +1,7 @@
 # DataWarehouse-Design
 It creates a schema design for the data warehouse that integrates the data sources, identify summarizability problems in the design, and populate data warehouse tables from sample rows in the data sources. 
 
-<p>Mini case study contains two data sources with sample data along with a statement of business needs. Using the data sources and business needs, you will specify a dimensional model with dimensions, measures, and grain, create a schema design for the data warehouse that integrates the data sources, identify summarizability problems in the design, and populate data warehouse tables from sample rows in the data sources.</p>
+<p>Mini case study contains two data sources with sample data along with a statement of business needs. Using the data sources and business needs, we will specify a dimensional model with dimensions, measures, and grain, create a schema design for the data warehouse that integrates the data sources, identify summarizability problems in the design, and populate data warehouse tables from sample rows in the data sources.</p>
 
 <p><h4>First of all lets start with basics of Data Warehousing:</h4></p>
 
