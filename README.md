@@ -6,6 +6,10 @@ It creates a schema design for the data warehouse that integrates the data sourc
 
 <p>In addition to a relational database, a data warehouse environment includes an extraction, transportation, transformation, and loading (ETL) solution, an online analytical processing (OLAP) engine, client analysis tools, and other applications that manage the process of gathering data and delivering it to business users.</p>
 
+<div>
+  <img src= "https://imgur.com/cxrJ3LH.png", width="500px">
+</div>
+
 <h3>Difference between OLTP and OLAP systems</h3>
 <p><b>OLTP (Online Transaction Processing):</b> It is used for handling transactions (SELECT,INSERT,UPDATE,DELETE). The primary objective is data processing and not data analysis. The main emphasis for OLTP systems is put on very fast query processing, maintaining data integrity in multi-access environments and an effectiveness measured by number of transactions per second. In OLTP database there is detailed and current data, and schema used to store transactional databases is the entity model (usually 3NF). <b>Databases</b> are modeled on the concept of <b>OLTP</b> </p>
 <p><b>OLAP (Online Analytical Processing):</b> The primary objective is data retrieving and data analysis. It is basically an online database query answering system. In OLAP database there is aggregated, historical data, stored in multi-dimensional schemas (usually star schema). Sometime query need to access large amount of data in Management records. <b>Data Warehouse</b> is modeled n the concept of <b>OLAP</b></p>
