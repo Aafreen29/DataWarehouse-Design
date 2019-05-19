@@ -52,7 +52,7 @@ Usually, data operations and analysis are performed using the simple spreadsheet
 <p>The extracted data is cleaned and transformed. Data is loaded into an OLAP server (or OLAP cube) where information is pre-calculated in advance for further analysis. </p>
 
 <h3>Basic analytical operations of OLAP</h3>
-<p>Four types of analytical operations in OLAP are:
+<p>Four types of analytical operations in OLAP are:<br>
 1>Roll-up <br>
 2>Drill-down <br>
 3>Slice and dice <br>
