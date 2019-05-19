@@ -46,3 +46,93 @@ OLTP systems usually store data from only a few weeks or months. The OLTP system
 The OLAP Cube consists of numeric facts called measures which are categorized by dimensions. OLAP Cube is also called the <b>hypercube</b>.
 <br>
 Usually, data operations and analysis are performed using the simple spreadsheet, where data values are arranged in row and column format. This is ideal for two-dimensional data. However, OLAP contains <b>multidimensional data</b>, with data usually obtained from a different and unrelated source. Using a spreadsheet is not an optimal option. The cube can store and analyze multidimensional data in a logical and orderly manner. </p>
+
+<h4>How does it work?</h4>
+<p>A Data warehouse would extract information from multiple data sources and formats like text files, excel sheet, multimedia files, etc. </p>
+<p>The extracted data is cleaned and transformed. Data is loaded into an OLAP server (or OLAP cube) where information is pre-calculated in advance for further analysis. </p>
+
+<h3>Basic analytical operations of OLAP</h3>
+<p>Four types of analytical operations in OLAP are:
+1>Roll-up <br>
+2>Drill-down <br>
+3>Slice and dice <br>
+4>Pivot (rotate)</p>
+
+<h4>Roll-up:</h4>
+<p>Roll-up is also known as "consolidation" or "aggregation." The Roll-up operation can be performed in 2 ways:
+
+1> Reducing dimensions <br>
+2> Climbing up concept hierarchy. Concept hierarchy is a system of grouping things based on their order or level.
+
+Consider the following diagram:</p>
+<div>
+  <img src="https://imgur.com/x8UhTD6.png", width= "400px">
+</div>
+
+<p> -In this example, cities New jersey and Lost Angles and rolled up into country USA. <br>
+    -The sales figure of New Jersey and Los Angeles are 440 and 1560 respectively. They become 2000 after roll-up. <br>
+    -In this aggregation process, data is location hierarchy moves up from city to the country.<br>
+    -In the roll-up process at least one or more dimensions need to be removed. In this example, Quater dimension is removed. </p>
+    
+<h4>Drill-down</h4>
+<p> In drill-down data is fragmented into smaller parts. It is the opposite of the rollup process. It can be done via
+
+1> Moving down the concept hierarchy <br>
+2> Increasing a dimension
+
+Consider the following diagram:</p>
+<div>
+  <img src="https://imgur.com/75ntxb1.png", width= "500px">
+</div>
+
+<p> -Quater Q1 is drilled down to months January, February, and March. Corresponding sales are also registers.
+    -In this example, dimension months are added. </p>
+
+<h4>Slice</h4>
+<p>Here, one dimension is selected, and a new sub-cube is created.<br>
+
+Following diagram explain how slice operation performed: </p>
+<div>
+  <img src="https://imgur.com/BVzAuNU.png", width= "400px">
+</div>
+
+<p> -Dimension Time is Sliced with Q1 as the filter.
+    -A new cube is created altogether. </p>
+    
+<h4>Dice</h4>
+<p>This operation is similar to a slice. The difference in dice is you select 2 or more dimensions that result in the creation of a sub-cube. <br>
+Consider the following diagram:
+</p>
+<div>
+  <img src="https://imgur.com/UhoQ48n.png", width="400px">
+  <div>
+
+<h4>Pivot</h4>
+<p>In Pivot, you rotate the data axes to provide a substitute presentation of data.<br>
+
+In the following example, the pivot is based on item types. </p>
+
+<div>
+  <img src="https://imgur.com/jOyjIFu.png", width= "400px">
+</div>
+
+<h4>Dimensions</h4>
+<p>The tables that describes the dimensions involved are called <b>Dimension tables</b><br>
+Dividing a Data Warehouse project into dimensions provides structured information for analysis and reporting<br>
+End users fire queries on these dimension tables which contain descriptive information</p>
+<div>
+  <img src="https://imgur.com/H4YwcfF.png">
+</div>
+
+<h4>Facts and Measures</h4>
+<p>A <b>fact</b> is a measure that can be summed, averaged or manipulated<br>
+A Fact table contain 2 kinds of data- a <b>dimension key</b> and a <b>measure</b><br>
+Every dimension table is linked to a Fact table.</p>
+<div>
+<img src= "https://imgur.com/8kg3VTf.png">
+</div>
+
+<h4>Schemas</h4>
+<p>A schema gives the logical description of the entire database<br>
+It gives details about the constraints placed on the tables, key values present and how the key values are linked between the different tables<br>
+  A <b>database</b> uses relational model, while a <b>datawarehouse</b> uses <b>Star</b>, <b>Snowflake</b>,and <b>Constellation</b> schema.</p>
